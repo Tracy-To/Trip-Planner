@@ -3,6 +3,14 @@ const router = express.Router()
 const Trip = require('../models/trips.js')
 const Item = require('../models/tripItems.js')
 
+// Index Route
+router.get('/', async (req, res) => {
+  const foundTrips = await Trip.find({})
+  res.render('index.ejs', {
+    trips: foundTrips
+  })
+})
+
 // New Route
 router.get('/new', (req, res) => {
   res.render('newTrip.ejs')
