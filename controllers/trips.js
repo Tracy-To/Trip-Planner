@@ -9,9 +9,15 @@ router.get('/new', (req, res) => {
 })
 
 // Create Route
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   console.log(req.body)
-  res.send('received')
+  try {
+    const newTrip = await Trip.create(req.body)
+    res.send(newTrip)
+  } catch (err) {
+    console.log(err)
+    res.status(500).send(error)
+  }
 })
 
 module.exports = router
