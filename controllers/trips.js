@@ -3,9 +3,15 @@ const router = express.Router()
 const Trip = require('../models/trips.js')
 const Item = require('../models/tripItems.js')
 
-// Index Route
+// New Route
 router.get('/new', (req, res) => {
-  res.send('Greetings ^_^')
+  res.render('newTrip.ejs')
+})
+
+// Create Route
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('received')
 })
 
 module.exports = router

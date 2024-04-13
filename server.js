@@ -5,6 +5,9 @@ const mongoose = require('mongoose')
 const mongoURI = process.env.MONGO_URI
 const PORT = process.env.PORT
 
+// Middleware
+app.use(express.urlencoded({extended:true}))
+
 // Controllers
 const tripsController = require('./controllers/trips.js')
 app.use('/trips', tripsController)
@@ -15,6 +18,11 @@ const db = mongoose.connection
 db.on('error', (err) => console.log(err.message + 'error with mongo connection'))
 db.on('connected', () => console.log('mongo is connected'))
 db.on('disconnected', () => console.log('mongo disconnected'))
+
+// Index Route 
+app.get('/', (req, res) => {
+  res.send('Greetings ^_^')
+})
 
 // Run Server
 app.listen(PORT, () => {
