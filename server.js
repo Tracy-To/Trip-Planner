@@ -21,7 +21,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 // Index Route 
 app.get('/', (req, res) => {
-  res.send('Greetings ^_^')
+  res.send('Greetings, Human! ^_^')
 })
 
 // Run Server
