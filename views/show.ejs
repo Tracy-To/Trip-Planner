@@ -17,22 +17,26 @@
         <%= trip.thing2 %> <br>
         <%= trip.date2 %> <br>
         <%= trip.cost2 %> <br>
-        <%= trip.picture2 %> <br>
+        <img src="<%= trip.picture2 %>"> <br>
         <br>
         <%= trip.thing3 %> <br>
         <%= trip.date3 %> <br>
         <%= trip.cost3 %> <br>
-        <%= trip.picture3 %> <br>
+        <img src="<%= trip.picture3 %>"> <br>
         <br>
         <%= trip.thing4 %> <br>
         <%= trip.date4 %> <br>
         <%= trip.cost4 %> <br>
-        <%= trip.picture4 %> <br>
+        <img src="<%= trip.picture4 %>"> <br>
         <br>
         <%= trip.thing5 %> <br>
         <%= trip.date5 %> <br>
         <%= trip.cost5 %> <br>
-        <%= trip.picture5 %> <br>
+        <img src="<%= trip.picture5 %>"> <br>
+        <br>
+            <form action="/trips/<%=trip.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+            </form>     
         <nav>
             <a href="/trips">Back to Trips Index</a>
         </nav>

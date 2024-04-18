@@ -37,4 +37,16 @@ router.post('/', async (req, res) => {
   }
 })
 
+// Delete Route
+router.delete('/:id', async (req, res) => {
+  try {
+    const trip = await Trip.findByIdAndDelete(req.params.id)
+    console.log(`Deleted trip: ${trip}`)
+    res.redirect('/trips')
+  } catch (err) {
+    console.log("ERROR ON DELETE REQUEST: ", err)
+    res.status(500).send(err)
+  }
+})
+
 module.exports = router

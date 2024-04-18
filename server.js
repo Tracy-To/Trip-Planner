@@ -1,4 +1,5 @@
 const express = require('express')
+const methodOverride = require('method-override')
 const app = express()
 require('dotenv').config()
 const mongoose = require('mongoose')
@@ -7,6 +8,7 @@ const PORT = process.env.PORT
 
 // Middleware
 app.use(express.urlencoded({extended:true}))
+app.use(methodOverride('_method'))
 
 // Controllers
 const tripsController = require('./controllers/trips.js')
@@ -21,7 +23,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 // Index Route 
 app.get('/', (req, res) => {
-  res.send('Greetings, Human! ^_^')
+  res.send('Greetings, Traveler! ^_^')
 })
 
 // Run Server
