@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
+<%- include('partials/header.ejs') %>
+        
+<link rel="stylesheet" href="/css/app-index.css"> 
+<title>Your Trips</title>
+
     </head>
     <body>
-        <h1>Trips Index Page</h1>
-        <nav>
-          <a href="/trips/new">Create a New Trip</a>
-        </nav>
+        <h1>Your Trips</h1>
         <ul>
             <% for (let i = 0; i < trips.length; i++) { %>
                 <li>
@@ -18,5 +15,8 @@
                 </li>
             <% } %>
         </ul>
+        <nav>
+          <a href="/trips/new" id="trip-new">Create a New Trip</a>
+        </nav>
     </body>
 </html>

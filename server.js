@@ -7,6 +7,7 @@ const mongoURI = process.env.MONGO_URI
 const PORT = process.env.PORT
 
 // Middleware
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
