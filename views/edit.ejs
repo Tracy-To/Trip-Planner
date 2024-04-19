@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Trip Page</h1>
+        <form action="/trips/<%=trip.id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%=trip.name%>" /> <br>
+            Date(s): <input type="text" name="date" value="<%=trip.date%>" /> <br>
+            <br>
+            *Edit Message*
+            <br>
+            <br>
+            First Thing: <input type="text" name="thing1" value="<%=trip.thing1%>" /> <br>
+            Day/time: <input type="text" name="date1" value="<%=trip.date1%>" /> <br>
+            Cost: <input type="text" name="cost1" value="<%=trip.cost1%>" /> <br>
+            Picture url: <input type="text" name="picture1" value="<%=trip.picture1%>" /> <br>
+            <br>
+            Second Thing: <input type="text" name="thing2" value="<%=trip.thing2%>" /> <br>
+            Day/time: <input type="text" name="date2" value="<%=trip.date2%>" /> <br>
+            Cost: <input type="text" name="cost2" value="<%=trip.cost2%>" /> <br>
+            Picture url: <input type="text" name="picture2" value="<%=trip.picture2%>" /> <br>
+            <br>
+            Third Thing: <input type="text" name="thing3" value="<%=trip.thing3%>" /> <br>
+            Day/time: <input type="text" name="date3" value="<%=trip.date3%>" /> <br>
+            Cost: <input type="text" name="cost3" value="<%=trip.cost3%>" /> <br>
+            Picture url: <input type="text" name="picture3" value="<%=trip.picture3%>" /> <br>
+            <br>
+            Fourth Thing: <input type="text" name="thing4" value="<%=trip.thing4%>" /> <br>
+            Day/time: <input type="text" name="date4" value="<%=trip.date4%>" /> <br>
+            Cost: <input type="text" name="cost4" value="<%=trip.cost4%>" /> <br>
+            Picture url: <input type="text" name="picture4" value="<%=trip.picture4%>" /> <br>
+            <br>
+            Fifth Thing: <input type="text" name="thing5" value="<%=trip.thing5%>" /> <br>
+            Day/time: <input type="text" name="date5" value="<%=trip.date5%>" /> <br>
+            Cost: <input type="text" name="cost5" value="<%=trip.cost5%>" /> <br>
+            Picture url: <input type="text" name="picture5" value="<%=trip.picture5%>" /> <br>
+            <br>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>

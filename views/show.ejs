@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-        <h1>Trips Show Page</h1>
+        <h1>Trip Show Page</h1>
         <%= trip.name %> <br>
         <%= trip.date %> <br>
         <br>
@@ -38,6 +38,7 @@
                 <input type="submit" value="DELETE"/>
             </form>     
         <nav>
+            <a href="/trips/<%=trip.id%>/edit">Edit</a> <br>
             <a href="/trips">Back to Trips Index</a>
         </nav>
     </body>
