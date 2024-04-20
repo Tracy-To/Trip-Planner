@@ -7,18 +7,20 @@
     <body>
       <div class="container">
         <h1>Your Trips</h1>
+        <h2>Create a new trip or click on a trip to see your plans!</h2>
+        <nav>
+          <a href="/trips/new">Create</a>
+        </nav>
           <ul>
             <% for (let i = 0; i < trips.length; i++) { %>
               <li>
                 <a href="/trips/<%=trips[i].id%>">
-                  <%= trips[i].name %>
+                  <%= trips[i].name %> (<%= trips[i].date %>) <br>
+                  <span class="description"><%= trips[i].description %></span>
                 </a>   
               </li>
             <% } %>
           </ul>
-        <nav>
-          <a href="/trips/new" id="trip-new">Create a New Trip</a>
-        </nav>
       </div>
     </body>
 </html>
