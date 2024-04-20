@@ -1,38 +1,41 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
+<%- include('partials/header.ejs') %>
+        
+<link rel="stylesheet" href="/css/app-show.css"> 
+<title> <%=trip.name%> </title>
+
     </head>
     <body>
-        <h1>Trip Show Page</h1>
-        <%= trip.name %> <br>
-        <%= trip.date %> <br>
+        <h1 id="title"><%=trip.name%> (<%=trip.date%>) <br>
+        <%=trip.description%></h1>
+        <div class="text"><%=trip.thing1%></div> 
+        <div class="text"><%=trip.date1%></div>
+        <div class="text"><%=trip.duration1%></div>
+        <div class="text"><%=trip.cost1%></div>
+        <img src="<%=trip.picture1%>" class="picture">
         <br>
-        <%= trip.thing1 %> <br>
-        <%= trip.date1 %> <br>
-        <%= trip.cost1 %> <br>
-        <img src="<%= trip.picture1 %>"> <br>
+        <div class="text"><%=trip.thing2%></div>
+        <div class="text"><%=trip.date2%></div>
+        <div class="text"><%=trip.duration2%></div>
+        <div class="text"><%=trip.cost2%></div>
+        <img src="<%=trip.picture2%>" class="picture">
         <br>
-        <%= trip.thing2 %> <br>
-        <%= trip.date2 %> <br>
-        <%= trip.cost2 %> <br>
-        <img src="<%= trip.picture2 %>"> <br>
+        <div class="text"><%=trip.thing3%></div>
+        <div class="text"><%=trip.date3%></div>
+        <div class="text"><%=trip.duration3%></div>
+        <div class="text"><%=trip.cost3%></div>
+        <img src="<%=trip.picture3%>" class="picture">
         <br>
-        <%= trip.thing3 %> <br>
-        <%= trip.date3 %> <br>
-        <%= trip.cost3 %> <br>
-        <img src="<%= trip.picture3 %>"> <br>
+        <div class="text"><%=trip.thing4%></div>
+        <div class="text"><%=trip.date4%></div>
+        <div class="text"><%=trip.duration4%></div>
+        <div class="text"><%=trip.cost4%></div>
+        <img src="<%=trip.picture4%>" class="picture">
         <br>
-        <%= trip.thing4 %> <br>
-        <%= trip.date4 %> <br>
-        <%= trip.cost4 %> <br>
-        <img src="<%= trip.picture4 %>"> <br>
-        <br>
-        <%= trip.thing5 %> <br>
-        <%= trip.date5 %> <br>
-        <%= trip.cost5 %> <br>
-        <img src="<%= trip.picture5 %>"> <br>
+        <div class="text"><%=trip.thing5%></div>
+        <div class="text"><%=trip.date5%></div>
+        <div class="text"><%=trip.duration5%></div>
+        <div class="text"><%=trip.cost5%></div>
+        <img src="<%=trip.picture5%>" class="picture">
         <br>
             <form action="/trips/<%=trip.id%>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE"/>
@@ -42,4 +45,5 @@
             <a href="/trips">Back to Trips Index</a>
         </nav>
     </body>
-</html>
+
+<%- include('partials/footer.ejs') %>
