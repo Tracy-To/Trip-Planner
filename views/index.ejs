@@ -5,18 +5,20 @@
 
     </head>
     <body>
+      <div class="container">
         <h1>Your Trips</h1>
-        <ul>
+          <ul>
             <% for (let i = 0; i < trips.length; i++) { %>
-                <li>
-                  <a href="/trips/<%=trips[i].id%>">
-                    <%= trips[i].name %>
-                  </a>   
-                </li>
+              <li>
+                <a href="/trips/<%=trips[i].id%>">
+                  <%= trips[i].name %>
+                </a>   
+              </li>
             <% } %>
-        </ul>
+          </ul>
         <nav>
           <a href="/trips/new" id="trip-new">Create a New Trip</a>
         </nav>
+      </div>
     </body>
 </html>

@@ -1,16 +1,30 @@
 body {
-  background-color: #caf4fa;
+  background-color: #bdf3f0;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin: 0;
+}
+
+.container {
+  background-color: #e8f3f3;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 60px;
+  border-radius: 10px;
+  border: 10px solid #3b4948;
 }
 
 h1 {
-  color: #395ce0;
-  font-size: 40px;
+  color: white;
+  background-color: #ec8c6f;
+  padding: 30px;
+  font-size: 45px;
   font-weight: 600;
+  margin-top: 0px;
   letter-spacing: 2px;
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 ul {

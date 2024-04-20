@@ -6,6 +6,9 @@ const mongoose = require('mongoose')
 const mongoURI = process.env.MONGO_URI
 const PORT = process.env.PORT
 
+// Heroku link
+// https://trip-planner-app-e3a36d01ba96.herokuapp.com/trips
+
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
