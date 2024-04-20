@@ -1,43 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
+<%- include('partials/header.ejs') %>
+
+<link rel="stylesheet" href="/css/app-edit.css"> 
+<title>Edit Your Trip</title>
+
     </head>
     <body>
-        <h1>Edit Trip Page</h1>
-        <form action="/trips/<%=trip.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%=trip.name%>" /> <br>
-            Date(s): <input type="text" name="date" value="<%=trip.date%>" /> <br>
-            <br>
-            *Edit Message*
-            <br>
-            <br>
-            First Thing: <input type="text" name="thing1" value="<%=trip.thing1%>" /> <br>
-            Day/time: <input type="text" name="date1" value="<%=trip.date1%>" /> <br>
-            Cost: <input type="text" name="cost1" value="<%=trip.cost1%>" /> <br>
-            Picture url: <input type="text" name="picture1" value="<%=trip.picture1%>" /> <br>
-            <br>
-            Second Thing: <input type="text" name="thing2" value="<%=trip.thing2%>" /> <br>
-            Day/time: <input type="text" name="date2" value="<%=trip.date2%>" /> <br>
-            Cost: <input type="text" name="cost2" value="<%=trip.cost2%>" /> <br>
-            Picture url: <input type="text" name="picture2" value="<%=trip.picture2%>" /> <br>
-            <br>
-            Third Thing: <input type="text" name="thing3" value="<%=trip.thing3%>" /> <br>
-            Day/time: <input type="text" name="date3" value="<%=trip.date3%>" /> <br>
-            Cost: <input type="text" name="cost3" value="<%=trip.cost3%>" /> <br>
-            Picture url: <input type="text" name="picture3" value="<%=trip.picture3%>" /> <br>
-            <br>
-            Fourth Thing: <input type="text" name="thing4" value="<%=trip.thing4%>" /> <br>
-            Day/time: <input type="text" name="date4" value="<%=trip.date4%>" /> <br>
-            Cost: <input type="text" name="cost4" value="<%=trip.cost4%>" /> <br>
-            Picture url: <input type="text" name="picture4" value="<%=trip.picture4%>" /> <br>
-            <br>
-            Fifth Thing: <input type="text" name="thing5" value="<%=trip.thing5%>" /> <br>
-            Day/time: <input type="text" name="date5" value="<%=trip.date5%>" /> <br>
-            Cost: <input type="text" name="cost5" value="<%=trip.cost5%>" /> <br>
-            Picture url: <input type="text" name="picture5" value="<%=trip.picture5%>" /> <br>
-            <br>
-            <input type="submit" name="" value="Submit Changes"/>
-        </form>
+        <div class="container">
+            <h1>Edit Your Trip</h1>
+            <form action="/trips/<%=trip.id%>?_method=PUT" method="POST">
+                <span id="form-message1">Give your trip a name! (aka where are you going?) <br> Optional: tell us when you're going and add a fun description!</span> <br>
+                <br>
+                <span class="input-label">Name:</span> <input type="text" name="name" value="<%=trip.name%>" /> <br>
+                <span class="input-label">Date(s):</span> <input type="text" name="date" value="<%=trip.date%>" /> <br>
+                <span class="input-label">Description:</span> <input type="text" name="description" value="<%=trip.description%>" /> <br>
+                <br>
+                <span id="form-message2">Add up to 5 exciting things you'll do on your trip!</span>
+                <br>
+                <br>
+                <span class="input-label">First Thing:</span> <input type="text" name="thing1" value="<%=trip.thing1%>" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date1" value="<%=trip.date1%>" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration1" value="<%=trip.duration1%>" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost1" value="<%=trip.cost1%>" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture1" value="<%=trip.picture1%>" /> <br>
+                <br>
+                <span class="input-label">Second Thing:</span> <input type="text" name="thing2" value="<%=trip.thing2%>" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date2" value="<%=trip.date2%>" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration2" value="<%=trip.duration2%>" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost2" value="<%=trip.cost2%>" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture2" value="<%=trip.picture2%>" /> <br>
+                <br>
+                <span class="input-label">Third Thing:</span> <input type="text" name="thing3" value="<%=trip.thing3%>" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date3" value="<%=trip.date3%>" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration3" value="<%=trip.duration3%>" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost3" value="<%=trip.cost3%>" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture3" value="<%=trip.picture3%>" /> <br>
+                <br>
+                <span class="input-label">Fourth Thing:</span> <input type="text" name="thing4" value="<%=trip.thing4%>" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date4" value="<%=trip.date4%>" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration4" value="<%=trip.duration4%>" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost4" value="<%=trip.cost4%>" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture4" value="<%=trip.picture4%>" /> <br>
+                <br>
+                <span class="input-label">Fifth Thing:</span> <input type="text" name="thing5" value="<%=trip.thing5%>" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date5" value="<%=trip.date5%>" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration5" value="<%=trip.duration5%>" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost5" value="<%=trip.cost5%>" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture5" value="<%=trip.picture5%>" /> <br>
+                <br>
+                <input type="submit" id="button" name="" value="Submit"/>
+            </form>
+        </div>
     </body>
