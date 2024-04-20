@@ -5,46 +5,50 @@
 
     </head>
     <body>
-        <h1>Create a New Trip</h1>
-        <form action="/trips" method="POST">
-            Name: <input type="text" name="name" /> <br>
-            Date(s): <input type="text" name="date" /> <br>
-            Description: <input type="text" name="description" /> <br>
-            <br>
-            Add up to 5 exciting things you'll do or places you'll visit on your trip!
-            <br>
-            <br>
-            First Thing: <input type="text" name="thing1" /> <br>
-            Day/time: <input type="text" name="date1" /> <br>
-            Duration: <input type="text" name="duration1" /> <br>
-            Cost: <input type="text" name="cost1" /> <br>
-            Picture url: <input type="text" name="picture1" /> <br>
-            <br>
-            Second Thing: <input type="text" name="thing2" /> <br>
-            Day/time: <input type="text" name="date2" /> <br>
-            Duration: <input type="text" name="duration2" /> <br>
-            Cost: <input type="text" name="cost2" /> <br>
-            Picture url: <input type="text" name="picture2" /> <br>
-            <br>
-            Third Thing: <input type="text" name="thing3" /> <br>
-            Day/time: <input type="text" name="date3" /> <br>
-            Duration: <input type="text" name="duration3" /> <br>
-            Cost: <input type="text" name="cost3" /> <br>
-            Picture url: <input type="text" name="picture3" /> <br>
-            <br>
-            Fourth Thing: <input type="text" name="thing4" /> <br>
-            Day/time: <input type="text" name="date4" /> <br>
-            Duration: <input type="text" name="duration4" /> <br>
-            Cost: <input type="text" name="cost4" /> <br>
-            Picture url: <input type="text" name="picture4" /> <br>
-            <br>
-            Fifth Thing: <input type="text" name="thing5" /> <br>
-            Day/time: <input type="text" name="date5" /> <br>
-            Duration: <input type="text" name="duration5" /> <br>
-            Cost: <input type="text" name="cost5" /> <br>
-            Picture url: <input type="text" name="picture5" /> <br>
-            <br>
-            <input type="submit" name="" value="Create Trip"/>
-        </form>
+        <div class="container">
+            <h1>Create a New Trip</h1>
+            <form action="/trips" method="POST">
+                <span id="form-message1">Give your trip a name! (aka where are you going?) <br> Optional: tell us when you're going and add a fun description!</span> <br>
+                <br>
+                <span class="input-label">Name:</span> <input type="text" name="name" /> <br>
+                <span class="input-label">Date(s):</span> <input type="text" name="date" /> <br>
+                <span class="input-label">Description:</span> <input type="text" name="description" /> <br>
+                <br>
+                <span id="form-message2">Add up to 5 exciting things you'll do on your trip!</span>
+                <br>
+                <br>
+                <span class="input-label">First Thing:</span> <input type="text" name="thing1" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date1" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration1" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost1" class="text" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture1" /> <br>
+                <br>
+                <span class="input-label">Second Thing:</span> <input type="text" name="thing2" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date2" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration2" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost2" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture2" /> <br>
+                <br>
+                <span class="input-label">Third Thing:</span> <input type="text" name="thing3" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date3" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration3" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost3" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture3" /> <br>
+                <br>
+                <span class="input-label">Fourth Thing:</span> <input type="text" name="thing4" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date4" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration4" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost4" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture4" /> <br>
+                <br>
+                <span class="input-label">Fifth Thing:</span> <input type="text" name="thing5" /> <br>
+                <span class="input-label">Day/time:</span> <input type="text" name="date5" /> <br>
+                <span class="input-label">Duration:</span> <input type="text" name="duration5" /> <br>
+                <span class="input-label">Cost:</span> <input type="text" name="cost5" /> <br>
+                <span class="input-label">Picture url:</span> <input type="text" name="picture5" /> <br>
+                <input type="submit" id="button" name="" value="Create"/>
+            </form>
+        </div>
     </body>
-</html>
+
+<%- include('partials/footer.ejs') %>
