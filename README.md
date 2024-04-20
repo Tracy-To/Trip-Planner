@@ -1,6 +1,9 @@
 # Trip-Planner
 This app allows users to plan and organize their trips.
 
+Link:
+https://trip-planner-app-e3a36d01ba96.herokuapp.com/trips
+
 ## Technologies Used
 Javascript, CSS, HTML, Node.js, Mongoose, Express, and EJS
 
