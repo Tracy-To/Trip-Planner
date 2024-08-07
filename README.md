@@ -8,7 +8,7 @@ https://trip-planner-app-e3a36d01ba96.herokuapp.com/trips
 Javascript, CSS, HTML, Node.js, Mongoose, Express, and EJS
 
 ## Approach Taken
-This a full-stack application that aims to help me travel in the future and plan my trip itineraries so I can stay more organized leading up to/during their travels. This app follows the MVC (Models, Views, Controllers) file structure and has a model with all 7 RESTful routes and full CRUD.
+This a full-stack application that aims to help me travel in the future and plan my trip itineraries so I can stay more organized leading up to/during my travels. This app follows the MVC (Models, Views, Controllers) file structure and has a model with all 7 RESTful routes and full CRUD.
 
 ## Unsolved Problems
 The show route needs some more styling. The application overall could have more features to enhance the user experience. 
